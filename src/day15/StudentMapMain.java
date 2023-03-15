@@ -15,6 +15,15 @@ public class StudentMapMain {
 		studentmapDTO.setStudentMajor("컴퓨터공학");
 		studentmapDTO.setStudentMobile("010-1111-1111");
 		studentmap.put(studentmapDTO.getId(), studentmapDTO);
+		
+		StudentMapDTO studentmapDTO3 = new StudentMapDTO();
+		studentmapDTO3.setId(1L);
+		studentmapDTO3.setStudentNumber("1111");
+		studentmapDTO3.setStudentName("김자바");
+		studentmapDTO3.setStudentMajor("컴퓨터공학");
+		studentmapDTO3.setStudentMobile("010-1111-1111");
+		studentmap.put(studentmapDTO.getId(), studentmapDTO);
+		System.out.println(studentmapDTO.equals(studentmapDTO3));
 
 		StudentMapDTO studentmapDTO1 = new StudentMapDTO();
 		studentmapDTO1.setId(2L);

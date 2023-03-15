@@ -1,5 +1,7 @@
 package day15;
 
+import java.util.Objects;
+
 public class StudentMapDTO {
 
 	private Long id;
@@ -54,5 +56,25 @@ public class StudentMapDTO {
 //		
 		return str;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, studentMajor, studentMobile, studentName, studentNumber);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		StudentMapDTO other = (StudentMapDTO) obj;
+		return Objects.equals(id, other.id) && Objects.equals(studentMajor, other.studentMajor)
+				&& Objects.equals(studentMobile, other.studentMobile) && Objects.equals(studentName, other.studentName)
+				&& Objects.equals(studentNumber, other.studentNumber);
+	}
+	
 
 }
