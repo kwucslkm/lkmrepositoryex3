@@ -9,7 +9,7 @@ public class StudentMapMain {
 		//
 		Map<Long, StudentMapDTO> studentmap = new HashMap<>();
 		StudentMapDTO studentmapDTO = new StudentMapDTO();
-		studentmapDTO.setId(1L);
+		studentmapDTO.setId(1);
 		studentmapDTO.setStudentNumber("1111");
 		studentmapDTO.setStudentName("김자바");
 		studentmapDTO.setStudentMajor("컴퓨터공학");

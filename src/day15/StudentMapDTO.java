@@ -4,17 +4,17 @@ import java.util.Objects;
 
 public class StudentMapDTO {
 
-	private Long id;
+	private long id;
 	private String studentNumber;
 	private String studentName;
 	private String studentMajor;
 	private String studentMobile;
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -57,10 +57,12 @@ public class StudentMapDTO {
 		return str;
 	}
 
+	// 두 객체의 필드값이 모두 일치 하는지 판단 하려면 아래처럼 hashCode(), equals(Object obj)
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, studentMajor, studentMobile, studentName, studentNumber);
 	}
+// 
 
 	@Override
 	public boolean equals(Object obj) {
@@ -75,6 +77,5 @@ public class StudentMapDTO {
 				&& Objects.equals(studentMobile, other.studentMobile) && Objects.equals(studentName, other.studentName)
 				&& Objects.equals(studentNumber, other.studentNumber);
 	}
-	
 
 }
