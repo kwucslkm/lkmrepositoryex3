@@ -28,12 +28,24 @@ public class BoardRepository {
 		return mapr;
 	}
 
-	public BoardDTO findById(String bno) {
-		for (String b : mapr.keySet()) {
-			if (mapr.get(b).getBno().equals(bno)) {
-				return mapr.get(b);
+	public Map<String, BoardDTO> findById(String bno, int chksearch) {
+		Map<String, BoardDTO> mapf = new HashMap<>();
+		if (chksearch == 1) {
+			for (String b : mapr.keySet()) {
+				if (mapr.get(b).getBno().equals(bno)) {
+					mapf.put(b, mapr.get(b));
+					return mapf;
+				}
 			}
+		} else {
+			for (String b : mapr.keySet()) {
+				if (mapr.get(b).getWriter().equals(bno)) {
+					mapf.put(b, mapr.get(b));
+				}
+			}
+			return mapf;
 		}
+
 		return null;
 	}
 
