@@ -3,9 +3,6 @@ package day18;
 public class Util {
 	private boolean returnChk = true;
 	private String keys;
-	
-	
-
 	public boolean isReturnChk() {
 		return returnChk;
 	}
@@ -21,9 +18,5 @@ public class Util {
 	public void setKeys(String keys) {
 		this.keys = keys;
 	}
-	
-	
-		
-	}
 
-
+}
